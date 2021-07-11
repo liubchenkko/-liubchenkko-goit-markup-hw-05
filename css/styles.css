@@ -139,7 +139,7 @@ a {
   bottom: -33px;
   background-color: var(--accent-color);
 
-/* .current::after {
+  /* .current::after {
   display: block;
   content: "";
   width: 100%;
@@ -296,11 +296,11 @@ a {
   margin-right: 30px;
 }
 
-.do-list-wrapper{
+.do-list-wrapper {
   position: relative;
 }
 
-.do-item-overlay{
+.do-item-overlay {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -429,7 +429,7 @@ a {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
-  
+
   transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -636,7 +636,7 @@ a {
 }
 
 .portfolio-link:hover .portfolio-overlay,
-.portfolio-link:focus .portfolio-overlay{
+.portfolio-link:focus .portfolio-overlay {
   transform: translateY(0%);
 }
 
@@ -644,19 +644,19 @@ a {
   color: var(--first-text-color);
 }
 
-.portfolio-list-wrapper{
+.portfolio-list-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-overlay{
+.portfolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
 
-  background-color: rgba(33, 150, 243, 0.9);;
+  background-color: rgba(33, 150, 243, 0.9);
   color: var(--third-text-color);
   font-weight: 400;
   font-size: 18px;
@@ -678,3 +678,52 @@ a {
 
 /*======FOOTER======*/
 /*============END PORTFOLIO PAGE============*/
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+
+  transition: opasity 1000ms linear, visibility 1000ms linear;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  cursor: pointer;
+}
+.icon-cross {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
